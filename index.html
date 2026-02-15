@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Community Helper - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0b0c15',
+                        surface: '#1a1c2e',
+                        neon: {
+                            purple: '#a855f7',
+                            pink: '#ec4899',
+                            cyan: '#06b6d4',
+                            emerald: '#10b981'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #a855f7, #ec4899, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-midnight text-slate-300 antialiased selection:bg-pink-500/30 selection:text-white overflow-x-hidden">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-pink-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-[40%] right-[20%] w-[300px] h-[300px] bg-cyan-500/10 rounded-full blur-[100px]"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-150 contrast-120"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-midnight/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-purple-500/30">
+                    <i class="fa-solid fa-hands-holding-circle text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-white tracking-tight">AI Community Helper</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#impact" class="hover:text-white transition-colors">Impact</a>
+                <a href="#contact" class="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 text-white transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-bold mb-8 uppercase tracking-wider animate-float">
+                <i class="fa-solid fa-bolt mr-2 text-pink-400"></i> Empowering Rural India
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Bridging the Digital Divide with <br>
+                <span class="text-gradient">Voice-First AI</span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                A comprehensive platform connecting citizens to public services, jobs, and education through local languages and intuitive technology.
+            </p>
+            <div class="flex justify-center">
+                <a href="#features" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-bold text-lg shadow-lg shadow-purple-500/30 hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                    Explore Features <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hero Image/Mockup (High Fidelity App Simulation) -->
+        <div class="mt-20 relative max-w-5xl mx-auto perspective-1000">
+            <!-- Glow behind -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-20 animate-pulse-slow"></div>
+            
+            <!-- Main Frame -->
+            <div class="relative glass-card rounded-3xl border border-white/10 p-2 shadow-2xl backdrop-blur-xl">
+                <!-- Screen Container -->
+                <div class="bg-[#0b0c15] rounded-2xl overflow-hidden aspect-[16/10] md:aspect-[2/1] flex flex-col relative shadow-inner">
+                    
+                    <!-- Screen Background Elements -->
+                    <div class="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[80px]"></div>
+                    <div class="absolute bottom-[-50%] right-[-20%] w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[80px]"></div>
+                    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+
+                    <!-- App Header -->
+                    <div class="relative z-10 px-6 py-4 flex justify-between items-center border-b border-white/5 bg-[#0b0c15]/50 backdrop-blur-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-[#1a1c2e] border border-white/10 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="font-bold text-white text-sm hidden sm:block">AI Community Helper</div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="hidden md:flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-white/10 gap-2">
+                                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <span class="text-[10px] text-slate-300 font-medium">Online • Karnataka</span>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 p-[1px]">
+                                <div class="w-full h-full rounded-full bg-[#0b0c15] flex items-center justify-center">
+                                    <i class="fa-solid fa-bell text-xs text-rose-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="relative z-10 flex-1 p-6 md:p-10 flex flex-col md:flex-row gap-8 overflow-hidden items-center">
+                        
+                        <!-- Left Column: Voice Assistant Focus -->
+                        <div class="flex-1 flex flex-col justify-center items-center text-center space-y-6">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-400/30 text-indigo-300 text-[10px] font-bold uppercase tracking-wider">
+                                <i class="fa-solid fa-bolt mr-2 text-pink-400"></i> AI Assistant Active
+                            </div>
+                            
+                            <h3 class="text-2xl md:text-4xl font-bold text-white leading-tight">
+                                How can I help you <br/>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-indigo-400">today?</span>
+                            </h3>
+
+                            <!-- Realistic Orb -->
+                            <div class="relative group cursor-pointer my-4">
+                                <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                                <div class="relative w-24 h-24 bg-gradient-to-br from-[#1a1c2e] to-[#0b0c15] rounded-full border border-white/10 flex items-center justify-center shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                                    <div class="absolute inset-0 rounded-full border-t border-white/20"></div>
+                                    <i class="fa-solid fa-microphone text-3xl text-white"></i>
+                                    
+                                    <!-- Orbiting ring simulation -->
+                                    <div class="absolute inset-[-6px] rounded-full border-2 border-indigo-500/30 border-t-transparent animate-spin-slow"></div>
+                                    <div class="absolute inset-[-10px] rounded-full border border-pink-500/20 border-b-transparent animate-spin-slow" style="animation-direction: reverse;"></div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-xs text-slate-400 font-medium tracking-wide">Tap to speak in Kannada, Hindi, Telugu...</p>
+                        </div>
+
+                        <!-- Right Column: Quick Access Grid -->
+                        <div class="flex-1 w-full max-w-sm grid grid-cols-2 gap-4">
+                            <!-- Card 1: Schemes -->
+                            <div class="bg-[#1a1c2e] border border-white/5 p-4 rounded-2xl flex flex-col gap-3 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all group cursor-pointer shadow-lg">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Schemes</div>
+                                    <div class="text-[10px] text-slate-500">Check Eligibility</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Jobs -->
+                            <div class="bg-[#1a1c2e] border border-white/5 p-4 rounded-2xl flex flex-col gap-3 hover:border-pink-500/30 hover:bg-pink-500/5 transition-all group cursor-pointer shadow-lg">
+                                <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Jobs</div>
+                                    <div class="text-[10px] text-slate-500">Govt & Private</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Education -->
+                            <div class="bg-[#1a1c2e] border border-white/5 p-4 rounded-2xl flex flex-col gap-3 hover:border-yellow-500/30 hover:bg-yellow-500/5 transition-all group cursor-pointer shadow-lg">
+                                <div class="w-10 h-10 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Skill Hub</div>
+                                    <div class="text-[10px] text-slate-500">Free Courses</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Emergency -->
+                            <div class="bg-[#1a1c2e] border border-white/5 p-4 rounded-2xl flex flex-col gap-3 hover:border-red-500/30 hover:bg-red-500/5 transition-all group cursor-pointer shadow-lg">
+                                <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-truck-medical"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-white">SOS</div>
+                                    <div class="text-[10px] text-slate-500">Emergency Help</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Statement -->
+    <section id="about" class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Built for <span class="text-pink-400">Accessibility</span> & <span class="text-cyan-400">Trust</span></h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                    Millions of people in rural communities struggle to access government schemes, jobs, and education due to language barriers, complex forms, and lack of digital literacy. 
+                </p>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    **AI Community Helper** solves this by providing a conversational, multilingual interface that works even on low-bandwidth networks. It's not just an app; it's a digital companion for growth.
+                </p>
+                <div class="flex gap-4">
+                    <div class="glass-card p-4 rounded-xl text-center min-w-[100px]">
+                        <div class="text-2xl font-bold text-white">7+</div>
+                        <div class="text-xs text-slate-500 uppercase">Languages</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center min-w-[100px]">
+                        <div class="text-2xl font-bold text-white">24/7</div>
+                        <div class="text-xs text-slate-500 uppercase">Support</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center min-w-[100px]">
+                        <div class="text-2xl font-bold text-white">Offline</div>
+                        <div class="text-xs text-slate-500 uppercase">Capable</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent rounded-3xl blur-2xl"></div>
+                <!-- Small feature grid representation moved to main features section -->
+                <div class="glass-card p-8 rounded-3xl h-full flex flex-col justify-center items-center text-center">
+                    <i class="fa-solid fa-users text-5xl text-purple-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Community First</h3>
+                    <p class="text-slate-400">From farmers to students, we cover every life situation with tailored AI assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section id="features" class="py-20 bg-black/20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Complete Feature Suite</h2>
+                <p class="text-slate-400">11 Powerful Tools for Digital Empowerment</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-purple-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microphone text-xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Voice Assistant</h3>
+                    <p class="text-slate-400 text-xs">Speak in Kannada, Hindi, Telugu & more. 24/7 answers for all queries.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-emerald-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-seedling text-xl text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Scheme Finder</h3>
+                    <p class="text-slate-400 text-xs">Auto-eligibility check for schemes. Provides benefits & document lists.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-orange-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved text-xl text-orange-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Scam Detector</h3>
+                    <p class="text-slate-400 text-xs">Red Warning system for fake news, links, and fraudulent job offers.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-indigo-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bell text-xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Smart Alerts</h3>
+                    <p class="text-slate-400 text-xs">Reminders for document expiry, deadlines, and critical updates.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-pink-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-briefcase text-xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Jobs & Scholarships</h3>
+                    <p class="text-slate-400 text-xs">Real-time alerts for government jobs, internships, and hackathons.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-cyan-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-map-location-dot text-xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Location Services</h3>
+                    <p class="text-slate-400 text-xs">GPS integration to find nearby hospitals, police stations, and offices.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-yellow-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-yellow-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Education Hub</h3>
+                    <p class="text-slate-400 text-xs">AI study roadmaps, course recommendations, and mock tests.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-blue-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-signature text-xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Form Guidance</h3>
+                    <p class="text-slate-400 text-xs">Step-by-step assistance to fill forms correctly and reduce rejections.</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-red-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-truck-medical text-xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Emergency SOS</h3>
+                    <p class="text-slate-400 text-xs">One-click call support for Ambulance, Police, and Women's Helpline.</p>
+                </div>
+
+                <!-- Feature 10 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-lime-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-lime-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gauge-high text-xl text-lime-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Lite Mode</h3>
+                    <p class="text-slate-400 text-xs">Optimized for 2G/3G rural networks with offline access capability.</p>
+                </div>
+
+                <!-- Feature 11 -->
+                <div class="glass-card p-6 rounded-3xl hover:border-teal-500/50 transition-colors group">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-camera text-xl text-teal-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Photo Scanner</h3>
+                    <p class="text-slate-400 text-xs">AI reads ID card photos to auto-fill profile details instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-slate-500 font-bold uppercase tracking-widest mb-10 text-sm">Powered By Modern Tech</h3>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
+                <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fa-brands fa-react text-cyan-400"></i> React</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fa-brands fa-css3-alt text-blue-500"></i> Tailwind</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fa-solid fa-brain text-purple-500"></i> AI Models</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fa-solid fa-location-arrow text-red-500"></i> Geolocation</div>
+                <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fa-solid fa-language text-green-500"></i> NLP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black/40 border-t border-white/5 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white">AI Community Helper</span>
+                </div>
+                <p class="text-slate-500 text-sm">Innovating for a better tomorrow.</p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-slate-600 text-xs">
+            &copy; 2024 AI Community Helper. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
